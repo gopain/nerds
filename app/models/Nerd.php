@@ -2,6 +2,7 @@
 
 
 class Nerd extends Eloquent {
-  protected $fillable = array('name', 'email', 'nerd_level');
+  // allow mass assignment to these parameters:
+  // protected $fillable = array('name', 'email', 'nerd_level');
 
 }

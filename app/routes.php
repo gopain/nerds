@@ -12,6 +12,15 @@
 */
 
 Route::get('/', function(){
-  return "Hello!";
-	// return View::make('hello');
+  return Redirect::to('nerds');
 });
+// Route::get('nerds', 'NerdController@index');
+Route::get('nerds', ['uses' => 'NerdController@index', 'as' => 'nerds.index']);
+Route::get('nerds/create', ['uses' => 'NerdController@create' 'as' => 'nerds.create')];
+Route::post('nerds', ['uses' => 'NerdController@store', 'as' => 'nerds.store']);
+Route::get('nerds/{id}', ['uses' => 'NerdController@show', 'as' => 'nerds.show']);
+Route::get('nerds/{id}/edit', ['uses' => 'NerdController@edit', 'as' => 'nerds.edit']);
+Route::put('nerds/{id}', ['uses' => 'NerdController@update', 'as' => 'nerds.update']);
+Route::delete('nerds/{id}', ['uses' => 'NerdController@destroy', 'as' => 'nerds.destroy']);
+
+
