@@ -23,4 +23,5 @@ Route::get('nerds/{id}/edit', ['uses' => 'NerdController@edit', 'as' => 'nerds.e
 Route::put('nerds/{id}', ['uses' => 'NerdController@update', 'as' => 'nerds.update']);
 Route::delete('nerds/{id}', ['uses' => 'NerdController@destroy', 'as' => 'nerds.destroy']);
 
-
+// Alernatively, we could use the following line for all the restful resources.
+// Routes::resource('nerds', 'NerdController');

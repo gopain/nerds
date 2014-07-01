@@ -29,7 +29,7 @@ class NerdController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		return "This is posting your info";
 	}
 
 
