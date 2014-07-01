@@ -8,7 +8,10 @@ class NerdController extends \BaseController {
 	 * @return Response
 	 */
 	public function index(){
-	 return "You made it to the NerdController and INDEX method!";
+	 // return "You made it to the NerdController and INDEX method!";
+   $nerds = Nerd::all();
+   return View::make('index')
+    ->with ('nerds', $nerds);
   }
 
 
@@ -18,7 +21,7 @@ class NerdController extends \BaseController {
 	 * @return Response
 	 */
 	public function create(){
-    return "You made it to the NerdController and CREATE method!";
+    return View::make('create');
 	}
 
 
@@ -41,7 +44,7 @@ class NerdController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		return  "You are viewing a single nerd!";
 	}
 
 
