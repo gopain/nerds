@@ -16,7 +16,7 @@ Route::get('/', function(){
 });
 // Route::get('nerds', 'NerdController@index');
 Route::get('nerds', ['uses' => 'NerdController@index', 'as' => 'nerds.index']);
-Route::get('nerds/create', ['uses' => 'NerdController@create' 'as' => 'nerds.create')];
+Route::get('nerds/create', ['uses' => 'NerdController@create', 'as' => 'nerds.create']);
 Route::post('nerds', ['uses' => 'NerdController@store', 'as' => 'nerds.store']);
 Route::get('nerds/{id}', ['uses' => 'NerdController@show', 'as' => 'nerds.show']);
 Route::get('nerds/{id}/edit', ['uses' => 'NerdController@edit', 'as' => 'nerds.edit']);

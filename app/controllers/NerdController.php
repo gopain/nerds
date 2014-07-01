@@ -1,4 +1,4 @@
-<?php
+  <?php
 
 class NerdController extends \BaseController {
 
